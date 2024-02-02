@@ -1,11 +1,11 @@
 - name: Play1          #name of the paly
   hosts: all
   tasks:
-  -name:Task1 of play1
-  ansible.builtin.debug:
+  - name: Task1 of play1
+    ansible.builtin.debug:
     msg: "Hi from Task1 of play1"
 
-     -name:Task2 of play1
+     -name: Task2 of play1
       ansible.builtin.debug:
       msg: "Hi from Task2 of play1"
 
@@ -14,6 +14,6 @@
   - name: Play2         #name of the paly
   hosts: all
   tasks:
-  -name:Task1 of play2
+  -name: Task1 of play2
   ansible.builtin.debug:
-    msg: "**********Hi from Task1 of play1"
+    msg: "********Hi from Task1 of play1********"
