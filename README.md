@@ -27,3 +27,45 @@ ANSIBLE ---->REDHAT--->IBM (IBM IS A REDHAT PRODUCT)
 
 INVENTORY IS NOTHING BUT THE LIST OF MACHINE IP OR DNS NAMES THAT YOU WANT ANSIBLE TO BE CHANGED
 
+
+ansible can be operated in 2 ways
+
+1.manual approach (we can execute one action ata a time)
+2.automate approach (we can execute multple acions using playbook)
+-----
+
+##Manual Approcah
+
+$ ansible -i inv all - e ansible_user=centos -e ansible_password=DevOps321 -m shell
+
+
+
+### widely asked interview question
+
+how to know the list of machies mentioned in the invnetory is up or not
+
+
+$ ansible -i inv all -e ansible_user=centos -e ansible_password=DevOps321 -m ping
+
+
+what is playbook
+
+on high level playbook is an ansible script to execute things parallely
+
+A PLAYBOOK IS LIST OF PLAYS
+
+a play is list of tasks
+
+a task is an action that we want to execute
+
+what is the language used by playbook
+
+YAML is the languagae used by ansible to write playbooks
+
+
+what is markup language
+
+markup language is a presentation langauage
+
+ex :HTML , XML 
+
