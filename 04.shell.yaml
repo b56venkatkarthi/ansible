@@ -1,6 +1,6 @@
 # usage of shell module is trticly restricted
     
-    - name: Demo on using shell commands 
+- name: Demo on using shell commands 
   hosts: all 
   tasks: 
     - name: Running uptime command 
