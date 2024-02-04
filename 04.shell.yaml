@@ -1,0 +1,7 @@
+# usage of shell module is trticly restricted
+
+- name: Demo on using shell command
+hosts: all
+tasks: 
+  - name: Running uptime command
+     ansible.builtin.shell: uptime
