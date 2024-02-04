@@ -1,9 +1,17 @@
+# Facts : Facts are nothing but the properties of the VM's that are mentioned in the supplied inventory file.
+
+# Ansible collects all the facts before the start of the playbook and how do I know the list of facts gathered it ?
+
  ###  ansible all -i inv  -e ansible_user=centos  -e ansible_password=DevOps321 -m gather_facts
 
-
-- name: Demo on facts 
-hosts: all
-tasks:
- - name: Printing the facts
+ - name: Demo on facts 
+   hosts: all
+  #  gather_facts: false   By default gather_facts is true
+   tasks:
+    - name: Printing the OS 
       ansible.builtin.debug:
-        msg: Os distribution is {{ansible_distribution}}  
+        msg: OS Distribution is {{ansible_distribution}}  
+
+    - name: Printing the MacAddress 
+      ansible.builtin.debug:
+        msg: MAC Address is {{ansible_default_ipv4.macaddress}}  
