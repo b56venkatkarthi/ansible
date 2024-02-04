@@ -2,7 +2,7 @@
 - name: Demo On Conditions 
   hosts: all 
   vars: 
-  action: true 
+     action: true 
   tasks:  
     - name: Run this task whem the Distro is CentOS Only 
       ansible.builtin.debug:
