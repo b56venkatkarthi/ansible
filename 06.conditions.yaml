@@ -2,7 +2,7 @@
   hosts: all
   vars:
   actions: true
-  tasks: 
+tasks: 
    - name: Run this task whem the Distro is CentOS Only 
       ansible.builtin.debug:
         msg: OS Distribution is {{ansible_distribution}}
