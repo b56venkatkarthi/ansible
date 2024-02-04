@@ -13,13 +13,4 @@
         msg: OS Distribution is {{ansible_distribution}}
       when: ansible_distribution == "Ubuntu"  
   
-    - name: Run this action 
-      ansible.builtin.debug: 
-        msg: Action is true  
-      when: action 
-
-    - name: Run this action when action is not defined
-      ansible.builtin.debug: 
-        msg: Action is undefined
-      when: action is undefined
       
