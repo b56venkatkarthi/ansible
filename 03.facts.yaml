@@ -5,7 +5,7 @@
    tasks:
     - name: Printing the OS 
       ansible.builtin.debug:
-        msg: OS Distribution is {{ansible_fibre_channel_wwn}}  
+        msg: OS Distribution is {{ansible_processor}}  
 
     - name: Printing the MacAddress 
       ansible.builtin.debug:
