@@ -6,4 +6,4 @@ hosts: all
 tasks:
  - name: Printing the facts
       ansible.builtin.debug:
-        msg: Os distribution is {{ansible_default_ipv4}}  
+        msg: Os distribution is {{ansible_distribution}}  
