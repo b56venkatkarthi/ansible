@@ -8,4 +8,4 @@
       register: OUT
     - name: Printing SYSTEM UPTIME
       ansible.builtin.debug:
-        msg: "uptime is {{OUT}}"
+        msg: "uptime is {{OUT.stdout_lines}}"
