@@ -6,15 +6,15 @@
   tasks:  
     - name: Run this task whem the Distro is CentOS Only 
       ansible.builtin.debug:
-        msg: OS Distribution is {{ansible_distribution}}
+      msg: OS Distribution is {{ansible_distribution}}
       when: ansible_distribution == "CentOS" 
 
     - name: Run this task whem the Distro is Ubuntu Only 
       ansible.builtin.debug:
-        msg: OS Distribution is {{ansible_distribution}}
+      msg: OS Distribution is {{ansible_distribution}}
       when: ansible_distribution == "Ubuntu"  
   
     - name: Run this action 
       ansible.builtin.debug: 
-        msg: Action is true  
+      msg: Action is true  
       when: action 
