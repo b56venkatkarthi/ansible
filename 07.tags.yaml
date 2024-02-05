@@ -3,17 +3,17 @@
   tasks:
     - name: Installing frontend
     ansible.builtin.debug:
-     msg: installing fronend
+       msg: installing fronend
 
 
     - name: Installing DB
     ansible.builtin.debug:
-      msg: starting froentend
+       msg: starting froentend
 
 
     - name: Starting DB
     ansible.builtin.debug:
-      msg: starting DB
+       msg: starting DB
 
 
             
