@@ -1,0 +1,12 @@
+- name: Demo on privilege Escalation
+  hosts: all 
+  become: yes                              # Run the playbook as a root user : This is like running the playbook as sudo : All the tasks of the playbook are executed as root user
+  tasks: 
+    - name: Running uptime command 
+      ansible.builtin.shell: id            # SHELL module won't offer the output by default on screen, if you want you can register the output. 
+      register: OUT                            # Output will be register in a variable called OUT, which can be used in any of the tasks of the play
+
+    - name: Printing User Details 
+      ansible.builtin.debug:
+        msg: "username is {{OUT.stdout}}"
+      # become_user: userName 
